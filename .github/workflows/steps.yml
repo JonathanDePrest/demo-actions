@@ -16,9 +16,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Set up job
-        uses: actions/checkout@v4
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access i
+      - uses: actions/checkout@v4
 
       # Runs a set of commands using the runners shell
       - name: make directory
@@ -35,5 +34,3 @@ jobs:
       - name: check contents of txt file
         run: cat output.txt
 
-      - name: Complete job
-        run: echo "✅ Job completed successfully!"
