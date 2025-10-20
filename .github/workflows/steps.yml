@@ -23,8 +23,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: make directory
         run: |
-          mkdir testmachine, 
-          cd /testmachine.
+          mkdir testmachine
+          cd testmachine
 
       - name: execute uname command
         run: uname -a >> output.txt
@@ -36,3 +36,4 @@ jobs:
         run: cat output.txt
 
       - name: Complete job
+        run: echo "✅ Job completed successfully!"
